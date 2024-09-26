@@ -1,0 +1,22 @@
+---
+title: "My Analysis"
+format: html
+editor: visual
+embed-resources: true
+---
+
+```{r}
+library(tidyverse)
+
+```
+
+```{r}
+#| echo: false
+storms |>
+  ggplot(mapping = aes(x = year, y = pressure, color = category)) +
+  geom_point()
+  
+
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
